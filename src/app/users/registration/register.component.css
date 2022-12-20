@@ -1,0 +1,23 @@
+.container__inner {
+    padding-top: 6rem;
+    padding-left: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width:720px;
+}
+
+.login {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+.image-preview {
+    height: 5rem;
+    margin: 1rem 0;
+  }
+  
+  .image-preview img {
+    height: 100%;
+  }
+  

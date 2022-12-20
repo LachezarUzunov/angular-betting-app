@@ -1,0 +1,42 @@
+<section class="container">
+    <div class="container__inner">
+      <h2>Sign Up</h2>
+      <form [formGroup]="form" (submit)="onRegistration()">
+        <div class="form-control">
+          <input type="text" formControlName="firstName" />
+          <label>First Name</label>
+        </div>
+        <div class="form-control">
+          <input type="text" formControlName="lastName" />
+          <label>Last Name</label>
+        </div>
+        <div class="form-control">
+          <input type="text" formControlName="email" />
+          <label>Email</label>
+        </div>
+        <div class="form-control">
+          <input type="password" formControlName="password" />
+          <label>Password</label>
+        </div>
+        <div class="form-control">
+          <input type="password" formControlName="repass" />
+          <label>Repeat Password</label>
+        </div>
+        <div>
+          <button type="button" class="btn__secondary" (click)="filePicker.click()">
+            Upload Profile Picture
+          </button>
+          <input type="file" #filePicker (change)="onImagePicked($event)" />
+        </div>
+        <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview">
+          <img [src]="imagePreview" [alt]="form.value.title" />
+        </div>
+        <button class="btn__primary" type="submit">Sign Up</button>
+  
+        <p class="text">
+          Have an account? <a class="login" routerLink="/login">Login</a>
+        </p>
+      </form>
+    </div>
+  </section>
+  

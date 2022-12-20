@@ -1,0 +1,13 @@
+.container__inner {
+    padding-top: 8rem;
+    padding-left: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width:720px;
+}
+
+.register {
+    color: var(--red);
+    text-decoration: underline;
+}
